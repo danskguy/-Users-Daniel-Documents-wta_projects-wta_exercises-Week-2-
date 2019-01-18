@@ -1,0 +1,72 @@
+#fizzbuzz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.circle {
+  height: 80px;
+  width: 80px;
+  background-color: yellow;
+  border-radius: 40px;
+  margin: 10px;
+}
+
+.circle:hover {
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  border-radius: 45px;
+
+}
+
+.circle:nth-child(3n) {
+  background-color: green;
+}
+
+.circle:nth-child(5n) {
+  background-color: blue;
+}
+
+.circle:nth-child(15n) {
+  background-color: purple;
+}
+
+.circle:nth-child(3n)::before {
+  content: "FIZZ"
+  position: relative;
+  top: 30px;
+  left: 22px;
+  color: white;
+}
+
+.circle:nth-child(5n)::before {
+  content: "BUZZ"
+  position: relative;
+  top: 30px;
+  left: 20px;
+  color: white;
+}
+
+.circle:nth-child(15n)::before {
+  content: "FIZZ BUZZ"
+  position: relative;
+  top: 30px;
+  left: 3px;
+  color: white;
+}
+
+.circle:nth-child(3n):hover::before {
+  top: 35px;
+  left: 27px;
+}
+
+.circle:nth-child(5n):hover::before {
+  top: 35px;
+  left: 24px;
+}
+
+.circle:nth-child(15n):hover::before {
+  top: 3px;
+  left: 3px;
+}

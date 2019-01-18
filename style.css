@@ -1,0 +1,80 @@
+/* GENERAL Layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Flag Layout */
+flag {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: calc(80vw / 1.9);
+    background-color: red;
+}
+
+flag > .top {
+    display: flex;
+    width: 100%;
+    height: calc(100% / 13 * 7);
+    flex-flow: column wrap;
+}
+
+flag > .bottom {
+    width: 100%;
+    height: calc(100% / 13 * 6);
+    
+}
+
+row {
+    display: flex;
+}
+/* Top */
+flag > .top row {
+    height:calc(100% / 7);
+    width: calc(100% * 1.14 /1.9);
+    background-color: red;
+}
+
+flag > .top star-container {
+    display: flex;
+    width: calc(100% * .76 / 1.9);
+    height: 100%;
+    background-color: blue;
+}
+
+flag > .top row:nth-child(odd) {
+    background-color: white;
+}
+
+flag > .top > star-container > star-row::before {
+    display: flex;
+    flex-wrap: wrap;
+    content: '\2605' '\2605' '\2605' '\2605' '\2605';
+    font-size: 40px;
+    
+}
+
+flag > .top > star-container > star-row {
+    width: 100%;
+    height: calc(100% / 6);
+    flex-wrap: wrap;
+
+}
+/* Bottom */
+flag > .bottom row:nth-child(odd) {
+    background-color: white;
+}
+
+flag > .bottom > row {
+    width: 100%;
+    height: calc(100% / 6);
+}
+
+@media only screen and (min-width: 2500px) {
+    flag > .top > star-container > star-row::before {
+        font-size: 12px;
+    }
+}
